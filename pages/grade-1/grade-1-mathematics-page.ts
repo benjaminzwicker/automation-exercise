@@ -1,12 +1,12 @@
 import { Page } from "@playwright/test";
-import BasePage from "./base-page";
+import BasePage from "../base-page";
 
-export default class HomePage extends BasePage {
+export default class GradeOneMathematicsPage extends BasePage {
   readonly urlPath: string;
 
   constructor(page: Page) {
     super(page);
-    this.urlPath = "/";
+    this.urlPath = "/pages/grade-1-mathematics";
   }
 
   async goto() {

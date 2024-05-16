@@ -158,7 +158,7 @@ export default class NavSection {
     await this.gradeTwelveLearningResources.click();
   }
 
-  async clickallGradesLearningResources() {
+  async clickAllGradesLearningResources() {
     await this.learningResourcesDropdown.click();
     await this.allGradesLearningResources.click();
   }
