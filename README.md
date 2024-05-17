@@ -1,5 +1,8 @@
 # TVO Automation Exercise
 
+> [!NOTE]
+> This project is abandoned as I just learned this opportunity is in person Toronto and I am based in Halifax at the moment.
+
 # Table of contents
 - [Table of contents](#table-of-contents)
   - [Usage](#usage)
