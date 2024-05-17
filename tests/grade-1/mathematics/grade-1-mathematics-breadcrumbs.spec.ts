@@ -47,5 +47,19 @@ test.describe(
         ).toBeInViewport();
       }
     );
+
+    test(
+        "Clicking on the 'Algebra' tab from 'Learning Activies' should open the relevant activities",
+        { tag: "@functional" },
+        async ({ gradeOneMathematicsPage }) => {
+          await gradeOneMathematicsPage.clickResourcesForLearningLink();
+          expect
+            .soft(gradeOneMathematicsPage.resourcesForLearningHeader)
+            .toBeInViewport();
+          expect(
+            gradeOneMathematicsPage.resourcesForLearningHeader
+          ).toBeInViewport();
+        }
+      );
   }
 );

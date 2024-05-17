@@ -15,7 +15,7 @@
 GitHub actions have been created to manually run tests, and automatically run tests on every pull and PR. Manual runs take the base url as input, which is set to an environment variable that is read by playwright.config.ts.
 
 > [!CAUTION]
-> GitHub Action runs are currently failing because the website doesn't support the test runners region. To fix this in the future, a self-hosted runner needs to be created.
+> GitHub Action runs are currently failing because the website doesn't support the test runners region. To fix this, a self-hosted runner needs to be created as a future task.
 
 ## Running Locally
 * Clone: `git clone https://github.com/benjaminzwicker/tvo-automation-exercise.git`
@@ -31,10 +31,10 @@ GitHub actions have been created to manually run tests, and automatically run te
 ## Assumptions
 Assumptions made in order to proceed with this project include:
 1. The way the website is currently running is as expected and can be referenced in absence of a spec document
-2. 
 
 ## Fixtures
-Fixtures were used to create test environments. This design pattern is useful to create reusable setup for every page or fixture that is needed for the tests.
+Fixtures were used to create test environments. This design pattern is useful to create reusable setup for every page or fixture that is needed for the tests. The fixtures automatically navigate to the page as before step. If there is a need to not have this behavior (such as if you want to test that one page navigates to the next in the test file)
+then the best option would be to create two fixtures for each page. (Example: Create `homePagePostNavigation` and `homePage` as separate fixtures)
 
 ## Test Organization
 Since the requirements were only to wrote 10 tests, only functional tests for the Grade One Mathematics page were written. It is important when writing tests to run with `--headed` tag in order to verify that the expected elements are being clicked and verified.
