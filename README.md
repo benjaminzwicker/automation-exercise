@@ -6,12 +6,16 @@
     - [Running from GitHub Actions](#running-from-github-actions)
     - [Running Locally](#running-locally)
   - [Design Decisions](#design-decisions)
+    - [Assumptions](#assumptions)
     - [Fixtures](#fixtures)
     - [Test Organization](#test-organization)
 
 # Usage
 ## Running from GitHub Actions
 GitHub actions have been created to manually run tests, and automatically run tests on every pull and PR. Manual runs take the base url as input, which is set to an environment variable that is read by playwright.config.ts.
+
+> [!CAUTION]
+> GitHub Action runs are currently failing because the website doesn't support the test runners region. To fix this in the future, a self-hosted runner needs to be created.
 
 ## Running Locally
 * Clone: `git clone https://github.com/benjaminzwicker/tvo-automation-exercise.git`
@@ -24,6 +28,11 @@ GitHub actions have been created to manually run tests, and automatically run te
   * Use `--grep '@tag'` to run specific tests
 
 # Design Decisions
+## Assumptions
+Assumptions made in order to proceed with this project include:
+1. The way the website is currently running is as expected and can be referenced in absence of a spec document
+2. 
+
 ## Fixtures
 Fixtures were used to create test environments. This design pattern is useful to create reusable setup for every page or fixture that is needed for the tests.
 
