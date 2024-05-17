@@ -1,4 +1,4 @@
-# Post Migration Automation Challenge
+# TVO Automation Exercise
 
 # Table of contents
 - [Table of contents](#table-of-contents)
@@ -28,7 +28,7 @@ GitHub actions have been created to manually run tests, and automatically run te
 Fixtures were used to create test environments. This design pattern is useful to create reusable setup for every page or fixture that is needed for the tests.
 
 ## Test Organization
-Since the requirements were only to wrote 10 tests, only functional tests for the Grade One Mathematics page were written.
+Since the requirements were only to wrote 10 tests, only functional tests for the Grade One Mathematics page were written. It is important when writing tests to run with `--headed` tag in order to verify that the expected elements are being clicked and verified.
 
 1. Test breadcrumbs navigate as expected
 2. Test `On this page:` options auto scroll to the relevant heading

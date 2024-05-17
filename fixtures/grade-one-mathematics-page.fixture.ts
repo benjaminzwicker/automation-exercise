@@ -10,7 +10,7 @@ const test = base.extend<GradeOneMathematicsPageFixture & GradeOnePageFixture>({
   gradeOneMathematicsPage: [
     async ({ page, gradeOnePage }, use) => {
       const gradeOneMathematicsPage = new GradeOneMathematicsPage(page);
-      gradeOnePage.clickMathematicsLink();
+      await gradeOnePage.clickMathematicsLink();
       await use(gradeOneMathematicsPage);
     },
     { scope: "test" },
